@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1441,         50]
-NotebookOptionsPosition[       966,         33]
-NotebookOutlinePosition[      1368,         49]
-CellTagsIndexPosition[      1325,         46]
+NotebookDataLength[      4797,        136]
+NotebookOptionsPosition[      3475,        105]
+NotebookOutlinePosition[      3877,        121]
+CellTagsIndexPosition[      3834,        118]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -28,11 +28,83 @@ c70a7335f810"],
 Cell["Datum : 23. 3. 2021", "Text",
  CellChangeTimes->{{3.8254956317280445`*^9, 
   3.825495646771891*^9}},ExpressionUUID->"fe4c2f9e-1c26-42bb-9650-\
-d4b234794522"]
+d4b234794522"],
+
+Cell[CellGroupData[{
+
+Cell["Podatki, ki jih bomo uporabili:", "Section",
+ CellChangeTimes->{{3.825498012512703*^9, 
+  3.825498035403577*^9}},ExpressionUUID->"43b3cae5-cc0b-45ae-89ba-\
+8f0e0a382fa4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ResourceData", "[", "\"\<Slovenia\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8254980431239805`*^9, 3.8254980640044694`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"f516dab5-76f2-4dec-a527-d105c17a5770"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ResourceObject", "notfname", 
+   "\"The ResourceObject \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"Slovenia\\\\\\\"\\\"}]\\) could not be found.\"",
+    2, 1, 1, 18252063758233386025, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.825498092256457*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"a442fc8c-4ba4-45b8-b230-b9715d331f03"],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.8254980924437337`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"7f20903b-f34a-4e92-9ccc-e78c49867979"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ResourceData", "[", 
+  RowBox[{
+  "ResourceObject", "[", 
+   "\"\<Coronavirus COVID-19 Pandemic Government Measures\>\"", "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.825498151864871*^9, 3.825498216244023*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"49de4c47-fb4e-48d5-b9ee-7d762b774937"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ResourceObject", "rscloudc", 
+   "\"You must connect to the Wolfram cloud to use the resource. Please use \
+CloudConnect to establish a connection with the Wolfram cloud.\"", 2, 3, 6, 
+   18252063758233386025, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.825498259629425*^9, 3.8254982813314457`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"d4b9adb9-f3ea-4029-91c3-473703af0b8e"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ResourceObject", "notfname", 
+   "\"The ResourceObject \\!\\(\\*RowBox[{\\\"\\\\\\\"Coronavirus COVID-19 \
+Pandemic Government Measures\\\\\\\"\\\"}]\\) could not be found.\"", 2, 3, 7,
+    18252063758233386025, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.825498259629425*^9, 3.825498281353647*^9}},
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"c87e6944-4d8f-476f-9bb9-64db0e1ded70"],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{{3.825498259727028*^9, 3.8254982813720055`*^9}},
+ CellLabel->"Out[3]=",ExpressionUUID->"3e8fb951-b034-41a7-b5e5-fa594003691c"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{960, 538},
-WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
+WindowSize->{949., 532.5},
+WindowMargins->{{-5.5, Automatic}, {Automatic, 0}},
 FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"7a3148b5-3493-49f2-b248-26c3c48e4068"
@@ -50,7 +122,21 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 204, 3, 98, "Title",ExpressionUUID->"0509346a-e9de-4ea4-a382-c70a7335f810"],
-Cell[787, 27, 163, 3, 34, "Text",ExpressionUUID->"fe4c2f9e-1c26-42bb-9650-d4b234794522"]
+Cell[787, 27, 163, 3, 34, "Text",ExpressionUUID->"fe4c2f9e-1c26-42bb-9650-d4b234794522"],
+Cell[CellGroupData[{
+Cell[975, 34, 176, 3, 67, "Section",ExpressionUUID->"43b3cae5-cc0b-45ae-89ba-8f0e0a382fa4"],
+Cell[CellGroupData[{
+Cell[1176, 41, 228, 3, 28, "Input",ExpressionUUID->"f516dab5-76f2-4dec-a527-d105c17a5770"],
+Cell[1407, 46, 399, 10, 23, "Message",ExpressionUUID->"a442fc8c-4ba4-45b8-b230-b9715d331f03"],
+Cell[1809, 58, 156, 2, 32, "Output",ExpressionUUID->"7f20903b-f34a-4e92-9ccc-e78c49867979"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2002, 65, 316, 7, 28, "Input",ExpressionUUID->"49de4c47-fb4e-48d5-b9ee-7d762b774937"],
+Cell[2321, 74, 464, 10, 23, "Message",ExpressionUUID->"d4b9adb9-f3ea-4029-91c3-473703af0b8e"],
+Cell[2788, 86, 464, 10, 23, "Message",ExpressionUUID->"c87e6944-4d8f-476f-9bb9-64db0e1ded70"],
+Cell[3255, 98, 180, 2, 54, "Output",ExpressionUUID->"3e8fb951-b034-41a7-b5e5-fa594003691c"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]
