@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     37367,        825]
-NotebookOptionsPosition[     34928,        779]
-NotebookOutlinePosition[     35330,        795]
-CellTagsIndexPosition[     35287,        792]
+NotebookDataLength[     63897,       1315]
+NotebookOptionsPosition[     60153,       1249]
+NotebookOutlinePosition[     60552,       1265]
+CellTagsIndexPosition[     60509,       1262]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,15 +38,401 @@ Cell["Podatki, ki jih bomo uporabili:", "Section",
   3.825498035403577*^9}},ExpressionUUID->"43b3cae5-cc0b-45ae-89ba-\
 8f0e0a382fa4"],
 
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"drzaveEvropa", " ", "=", " ", 
+  RowBox[{"CountryData", "[", 
+   RowBox[{"\"\<Europe\>\"", ",", " ", "\"\<Name\>\""}], "]"}], 
+  RowBox[{"(*", 
+   RowBox[{"Vse", " ", "evropske", " ", 
+    RowBox[{"dr\[ZHacek]ave", "."}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.8273923134843364`*^9, 3.82739232199045*^9}, {
+  3.827392416251712*^9, 3.8273924291639404`*^9}, {3.8273936971137533`*^9, 
+  3.8273937094776163`*^9}, {3.827394010835266*^9, 3.8273940386804876`*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"25bdc257-09fe-46eb-99ac-fb11d359155b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Albania\"\>", ",", "\<\"Andorra\"\>", ",", "\<\"Austria\"\>", 
+   ",", "\<\"Belarus\"\>", ",", "\<\"Belgium\"\>", 
+   ",", "\<\"Bosnia and Herzegovina\"\>", ",", "\<\"Bulgaria\"\>", 
+   ",", "\<\"Croatia\"\>", ",", "\<\"Cyprus\"\>", 
+   ",", "\<\"Czech Republic\"\>", ",", "\<\"Denmark\"\>", 
+   ",", "\<\"Estonia\"\>", ",", "\<\"Faroe Islands\"\>", 
+   ",", "\<\"Finland\"\>", ",", "\<\"France\"\>", ",", "\<\"Germany\"\>", 
+   ",", "\<\"Gibraltar\"\>", ",", "\<\"Greece\"\>", ",", "\<\"Guernsey\"\>", 
+   ",", "\<\"Hungary\"\>", ",", "\<\"Iceland\"\>", ",", "\<\"Ireland\"\>", 
+   ",", "\<\"Isle of Man\"\>", ",", "\<\"Italy\"\>", ",", "\<\"Jersey\"\>", 
+   ",", "\<\"Kosovo\"\>", ",", "\<\"Latvia\"\>", ",", "\<\"Liechtenstein\"\>",
+    ",", "\<\"Lithuania\"\>", ",", "\<\"Luxembourg\"\>", 
+   ",", "\<\"North Macedonia\"\>", ",", "\<\"Malta\"\>", 
+   ",", "\<\"Moldova\"\>", ",", "\<\"Monaco\"\>", ",", "\<\"Montenegro\"\>", 
+   ",", "\<\"Netherlands\"\>", ",", "\<\"Norway\"\>", ",", "\<\"Poland\"\>", 
+   ",", "\<\"Portugal\"\>", ",", "\<\"Romania\"\>", ",", "\<\"San Marino\"\>",
+    ",", "\<\"Serbia\"\>", ",", "\<\"Slovakia\"\>", ",", "\<\"Slovenia\"\>", 
+   ",", "\<\"Spain\"\>", ",", "\<\"Svalbard\"\>", ",", "\<\"Sweden\"\>", 
+   ",", "\<\"Switzerland\"\>", ",", "\<\"Ukraine\"\>", 
+   ",", "\<\"United Kingdom\"\>", ",", "\<\"Vatican City\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.827394039163704*^9},
+ CellLabel->"Out[35]=",ExpressionUUID->"61be2520-4b51-4647-91fa-f47f440f18bd"]
+}, Open  ]],
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"drzaveEU", " ", "=", " ", 
    RowBox[{"CountryData", "[", 
-    RowBox[{"\"\<EU\>\"", ",", " ", "\"\<Name\>\""}], "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.826110104671111*^9, 3.8261101549932814`*^9}, 
-   3.8261183828432055`*^9},
- CellLabel->
-  "In[143]:=",ExpressionUUID->"1fb9c9e5-9a64-47e6-a4e5-b0a253b9f134"],
+    RowBox[{"\"\<EU\>\"", ",", " ", "\"\<Name\>\""}], "]"}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"Vse", " ", "dr\[ZHacek]ave", " ", "Evropske", " ", 
+    RowBox[{"Unije", "."}]}], "*)"}], ";"}]], "Input",
+ CellChangeTimes->{{3.8273976444147224`*^9, 3.8273976555600653`*^9}},
+ CellLabel->"In[62]:=",ExpressionUUID->"42f0f9b6-5860-4466-b607-edee7442e0e2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"steviloZapornikovEvropa", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+    "Import", "[", 
+     "\"\<C:\\\\Users\\\\jrenc\\\\OneDrive\\\\Namizje\\\\ROM_projekt\\\\\
+persons_held_total.xlsx\>\"", "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.8273926707973795`*^9, 3.827392689236537*^9}, {
+   3.827392721791525*^9, 3.8273927817651386`*^9}, 3.827392908723411*^9, 
+   3.827392944596861*^9, {3.8273930691544905`*^9, 3.8273931022797456`*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"af38dcff-b26a-4dfd-91db-ac8b87711f70"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"evropskeDrzaveZaporniki", " ", "=", " ", 
+   RowBox[{"Select", "[", 
+    RowBox[{"steviloZapornikovEvropa", ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], "==", "\"\<Europe\>\""}], "&"}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"popolniPodatkiEvropa", " ", "=", " ", 
+  RowBox[{"Select", "[", 
+   RowBox[{"evropskeDrzaveZaporniki", ",", " ", 
+    RowBox[{
+     RowBox[{"!", 
+      RowBox[{"MemberQ", "[", 
+       RowBox[{"#", ",", "\"\<\>\""}], "]"}]}], "&"}]}], "]"}], 
+  RowBox[{"(*", 
+   RowBox[{"Vrstice", " ", "z", " ", "vsemi", " ", "podatki"}], 
+   "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.8273927936614013`*^9, 3.827392898198123*^9}, {
+   3.827392948205718*^9, 3.827392948420924*^9}, {3.827393032043455*^9, 
+   3.8273930630999413`*^9}, 3.8273931065574145`*^9, 3.827393367507553*^9, {
+   3.8273972781937475`*^9, 3.827397324805765*^9}, 3.8273974008683553`*^9, {
+   3.8273974790347443`*^9, 3.8273975236444445`*^9}, {3.827397558473097*^9, 
+   3.827397560283778*^9}, {3.827397592104731*^9, 3.8273976118322945`*^9}, {
+   3.827397664830307*^9, 3.82739768970963*^9}, {3.82740803129541*^9, 
+   3.8274080316719027`*^9}},
+ CellLabel->"In[65]:=",ExpressionUUID->"8d86efed-3bae-47ce-86a7-0996809b036f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Eastern Europe\"\>", 
+     ",", "\<\"Belarus\"\>", ",", "\<\"UN-CTS/NSO\"\>", ",", "48434.`", ",", 
+     "500.4`", ",", "42253.`", ",", "439.4`", ",", "40878.`", ",", "427.5`", 
+     ",", "44812.`", ",", "470.9`", ",", "45695.`", ",", "482.`", ",", 
+     "43349.`", ",", "458.6`", ",", "40186.`", ",", "426.`", ",", "39627.`", 
+     ",", "420.6`", ",", "36652.`", ",", "389.3`", ",", "28841.`", ",", 
+     "306.3`", ",", "28471.`", ",", "302.1`", ",", "29776.`", ",", "315.7`", 
+     ",", "33329.`", ",", "353.1`", ",", "35169.`", ",", "372.3`", ",", 
+     "34356.`", ",", "363.6`", ",", "32556.`", ",", "344.4`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Eastern Europe\"\>", 
+     ",", "\<\"Bulgaria\"\>", ",", "\<\"UN-CTS\"\>", ",", "10066.`", ",", 
+     "129.`", ",", "10871.`", ",", "140.4`", ",", "11436.`", ",", "148.8`", 
+     ",", "11058.`", ",", "144.9`", ",", "10271.`", ",", "135.6`", ",", 
+     "9408.`", ",", "125.`", ",", "9006.`", ",", "120.5`", ",", "9379.`", ",",
+      "126.3`", ",", "9885.`", ",", "134.`", ",", "9493.`", ",", "129.4`", 
+     ",", "8834.`", ",", "121.2`", ",", "7870.`", ",", "108.6`", ",", 
+     "7408.`", ",", "102.9`", ",", "7345.`", ",", "102.7`", ",", "6988.`", 
+     ",", "98.4`", ",", "6651.`", ",", "94.3`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Eastern Europe\"\>", 
+     ",", "\<\"Czechia\"\>", ",", "\<\"UN-CTS\"\>", ",", "17277.`", ",", 
+     "168.7`", ",", "18343.`", ",", "179.1`", ",", "18937.`", ",", "184.6`", 
+     ",", "18578.`", ",", "180.4`", ",", "18901.`", ",", "182.5`", ",", 
+     "20502.`", ",", "196.7`", ",", "21734.`", ",", "207.2`", ",", "21900.`", 
+     ",", "207.8`", ",", "23170.`", ",", "219.3`", ",", "22644.`", ",", 
+     "214.`", ",", "16645.`", ",", "157.2`", ",", "18658.`", ",", "176.2`", 
+     ",", "20866.`", ",", "196.8`", ",", "22481.`", ",", "211.7`", ",", 
+     "22159.`", ",", "208.2`", ",", "21577.`", ",", "202.3`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Eastern Europe\"\>", 
+     ",", "\<\"Hungary\"\>", ",", "\<\"UN-CTS\"\>", ",", "16860.`", ",", 
+     "166.3`", ",", "16546.`", ",", "163.6`", ",", "15755.`", ",", "156.2`", 
+     ",", "14822.`", ",", "147.4`", ",", "14353.`", ",", "143.2`", ",", 
+     "14743.`", ",", "147.5`", ",", "15432.`", ",", "155.`", ",", "16328.`", 
+     ",", "164.5`", ",", "17210.`", ",", "173.9`", ",", "17179.`", ",", 
+     "174.2`", ",", "17841.`", ",", "181.4`", ",", "17890.`", ",", "182.5`", 
+     ",", "17449.`", ",", "178.5`", ",", "17658.`", ",", "181.1`", ",", 
+     "17343.`", ",", "178.2`", ",", "16947.`", ",", "174.6`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Eastern Europe\"\>", 
+     ",", "\<\"Poland\"\>", ",", "\<\"UN-CTS\"\>", ",", "79281.`", ",", 
+     "206.2`", ",", "80368.`", ",", "209.3`", ",", "84875.`", ",", "221.2`", 
+     ",", "90529.`", ",", "236.`", ",", "89648.`", ",", "233.7`", ",", 
+     "84978.`", ",", "221.5`", ",", "85749.`", ",", "223.6`", ",", "82372.`", 
+     ",", "214.9`", ",", "82832.`", ",", "216.3`", ",", "85459.`", ",", 
+     "223.6`", ",", "80165.`", ",", "210.1`", ",", "79345.`", ",", "208.3`", 
+     ",", "72695.`", ",", "191.1`", ",", "72209.`", ",", "190.1`", ",", 
+     "74480.`", ",", "196.2`", ",", "72818.`", ",", "192.`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Eastern Europe\"\>", 
+     ",", "\<\"Romania\"\>", ",", "\<\"UN-CTS\"\>", ",", "42815.`", ",", 
+     "197.1`", ",", "39031.`", ",", "180.9`", ",", "36700.`", ",", "171.4`", 
+     ",", "34038.`", ",", "160.3`", ",", "29390.`", ",", "139.7`", ",", 
+     "26212.`", ",", "125.8`", ",", "26716.`", ",", "129.5`", ",", "28244.`", 
+     ",", "138.`", ",", "30694.`", ",", "150.9`", ",", "31817.`", ",", 
+     "157.3`", ",", "33434.`", ",", "166.1`", ",", "30156.`", ",", "150.5`", 
+     ",", "28334.`", ",", "142.2`", ",", "27455.`", ",", "138.7`", ",", 
+     "23450.`", ",", "119.3`", ",", "20792.`", ",", "106.6`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Eastern Europe\"\>", 
+     ",", "\<\"Slovakia\"\>", ",", "\<\"UN-CTS\"\>", ",", "8873.`", ",", 
+     "164.3`", ",", "9422.`", ",", "174.5`", ",", "8897.`", ",", "164.8`", 
+     ",", "8249.`", ",", "152.8`", ",", "7986.`", ",", "147.9`", ",", 
+     "8166.`", ",", "151.3`", ",", "9316.`", ",", "172.5`", ",", "10031.`", 
+     ",", "185.6`", ",", "10525.`", ",", "194.6`", ",", "10850.`", ",", 
+     "200.4`", ",", "9753.`", ",", "179.9`", ",", "10020.`", ",", "184.6`", 
+     ",", "9913.`", ",", "182.4`", ",", "9995.`", ",", "183.7`", ",", 
+     "10028.`", ",", "184.1`", ",", "10294.`", ",", "188.8`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Northern Europe\"\>", 
+     ",", "\<\"Denmark\"\>", ",", "\<\"UN-CTS\"\>", ",", "3641.`", ",", 
+     "67.6`", ",", "3767.`", ",", "69.7`", ",", "4041.`", ",", "74.5`", ",", 
+     "3932.`", ",", "72.2`", ",", "3624.`", ",", "66.3`", ",", "3451.`", ",", 
+     "62.8`", ",", "3721.`", ",", "67.3`", ",", "3944.`", ",", "71.`", ",", 
+     "3947.`", ",", "70.7`", ",", "3829.`", ",", "68.2`", ",", "4091.`", ",", 
+     "72.6`", ",", "3583.`", ",", "63.3`", ",", "3203.`", ",", "56.3`", ",", 
+     "3408.`", ",", "59.7`", ",", "3418.`", ",", "59.6`", ",", "3635.`", ",", 
+     "63.2`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Northern Europe\"\>", 
+     ",", "\<\"Estonia\"\>", ",", "\<\"UN-CTS\"\>", ",", "4576.`", ",", 
+     "333.3`", ",", "4565.`", ",", "334.7`", ",", "4410.`", ",", "325.2`", 
+     ",", "4310.`", ",", "319.5`", ",", "3456.`", ",", "257.1`", ",", 
+     "3656.`", ",", "272.8`", ",", "3555.`", ",", "266.1`", ",", "3393.`", 
+     ",", "254.7`", ",", "3400.`", ",", "256.`", ",", "3286.`", ",", "248.4`",
+      ",", "3112.`", ",", "235.9`", ",", "3034.`", ",", "230.5`", ",", 
+     "2823.`", ",", "214.7`", ",", "2864.`", ",", "217.5`", ",", "2723.`", 
+     ",", "206.4`", ",", "2584.`", ",", "195.3`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Northern Europe\"\>", 
+     ",", "\<\"Finland\"\>", ",", "\<\"UN-CTS\"\>", ",", "3641.`", ",", 
+     "69.7`", ",", "3704.`", ",", "70.7`", ",", "3867.`", ",", "73.5`", ",", 
+     "3851.`", ",", "73.`", ",", "3625.`", ",", "68.4`", ",", "3530.`", ",", 
+     "66.4`", ",", "3589.`", ",", "67.2`", ",", "3364.`", ",", "62.7`", ",", 
+     "3268.`", ",", "60.6`", ",", "3306.`", ",", "61.1`", ",", "3295.`", ",", 
+     "60.6`", ",", "3148.`", ",", "57.6`", ",", "3135.`", ",", "57.2`", ",", 
+     "3156.`", ",", "57.4`", ",", "3082.`", ",", "55.9`", ",", "2956.`", ",", 
+     "53.5`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Northern Europe\"\>", 
+     ",", "\<\"Ireland\"\>", ",", "\<\"UN-CTS\"\>", ",", "3234.`", ",", 
+     "81.3`", ",", "3162.`", ",", "77.9`", ",", "3022.`", ",", "73.`", ",", 
+     "3080.`", ",", "72.8`", ",", "3253.`", ",", "75.2`", ",", "3484.`", ",", 
+     "78.9`", ",", "3868.`", ",", "86.1`", ",", "4318.`", ",", "94.8`", ",", 
+     "4216.`", ",", "91.8`", ",", "4287.`", ",", "93.`", ",", "4088.`", ",", 
+     "88.6`", ",", "3777.`", ",", "81.6`", ",", "3722.`", ",", "80.`", ",", 
+     "3718.`", ",", "79.2`", ",", "3680.`", ",", "77.4`", ",", "3962.`", ",", 
+     "82.2`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Northern Europe\"\>", 
+     ",", "\<\"Latvia\"\>", ",", "\<\"UN-CTS\"\>", ",", "8305.`", ",", 
+     "360.1`", ",", "8231.`", ",", "361.2`", ",", "7646.`", ",", "339.5`", 
+     ",", "6965.`", ",", "313.`", ",", "6548.`", ",", "297.9`", ",", "6548.`",
+      ",", "301.6`", ",", "7055.`", ",", "328.9`", ",", "6780.`", ",", 
+     "320.`", ",", "6561.`", ",", "313.3`", ",", "6117.`", ",", "295.7`", ",",
+      "5136.`", ",", "251.1`", ",", "4745.`", ",", "234.8`", ",", "4409.`", 
+     ",", "220.7`", ",", "4243.`", ",", "214.9`", ",", "3765.`", ",", "193.`",
+      ",", "3522.`", ",", "182.7`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Northern Europe\"\>", 
+     ",", "\<\"Lithuania\"\>", ",", "\<\"UN-CTS\"\>", ",", "8063.`", ",", 
+     "236.2`", ",", "8125.`", ",", "240.3`", ",", "8137.`", ",", "243.3`", 
+     ",", "8079.`", ",", "244.6`", ",", "7866.`", ",", "241.4`", ",", 
+     "8000.`", ",", "249.`", ",", "8655.`", ",", "273.3`", ",", "9139.`", ",",
+      "292.5`", ",", "9920.`", ",", "321.8`", ",", "9729.`", ",", "319.4`", 
+     ",", "9261.`", ",", "307.8`", ",", "8636.`", ",", "290.7`", ",", 
+     "7355.`", ",", "250.9`", ",", "6815.`", ",", "235.8`", ",", "6599.`", 
+     ",", "232.`", ",", "6485.`", ",", "231.5`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Northern Europe\"\>", 
+     ",", "\<\"Sweden\"\>", ",", "\<\"UN-CTS\"\>", ",", "6755.`", ",", 
+     "75.5`", ",", "7332.`", ",", "81.5`", ",", "7377.`", ",", "81.6`", ",", 
+     "7397.`", ",", "81.3`", ",", "6977.`", ",", "76.1`", ",", "7073.`", ",", 
+     "76.6`", ",", "7286.`", ",", "78.2`", ",", "6846.`", ",", "72.9`", ",", 
+     "6669.`", ",", "70.4`", ",", "6296.`", ",", "66.`", ",", "5723.`", ",", 
+     "59.5`", ",", "5807.`", ",", "59.9`", ",", "5691.`", ",", "58.3`", ",", 
+     "5658.`", ",", "57.5`", ",", "5713.`", ",", "57.7`", ",", "6114.`", ",", 
+     "61.3`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Northern Europe\"\>", 
+     ",", "\<\"United Kingdom (England and Wales)\"\>", ",", "\<\"UN-CTS\"\>",
+      ",", "73657.`", ",", "139.3`", ",", "74488.`", ",", "140.1`", ",", 
+     "75121.`", ",", "140.2`", ",", "76560.`", ",", "141.9`", ",", "78445.`", 
+     ",", "144.2`", ",", "81674.`", ",", "148.9`", ",", "81836.`", ",", 
+     "148.2`", ",", "84004.`", ",", "150.8`", ",", "84428.`", ",", "150.3`", 
+     ",", "84886.`", ",", "150.1`", ",", "81884.`", ",", "143.8`", ",", 
+     "83678.`", ",", "145.8`", ",", "84444.`", ",", "145.9`", ",", "83604.`", 
+     ",", "143.5`", ",", "84441.`", ",", "143.9`", ",", "81904.`", ",", 
+     "138.6`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Northern Europe\"\>", 
+     ",", "\<\"United Kingdom (Scotland)\"\>", ",", "\<\"UN-CTS\"\>", ",", 
+     "6606.`", ",", "130.3`", ",", "6776.`", ",", "133.3`", ",", "6856.`", 
+     ",", "134.2`", ",", "7187.`", ",", "140.`", ",", "7376.`", ",", "142.7`",
+      ",", "7827.`", ",", "150.4`", ",", "7964.`", ",", "152.2`", ",", 
+     "7854.`", ",", "149.3`", ",", "8179.`", ",", "154.3`", ",", "8057.`", 
+     ",", "151.6`", ",", "7894.`", ",", "148.2`", ",", "7731.`", ",", 
+     "144.6`", ",", "7744.`", ",", "144.1`", ",", "7579.`", ",", "140.`", ",",
+      "7436.`", ",", "136.7`", ",", "7788.`", ",", "142.5`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Southern Europe\"\>", 
+     ",", "\<\"Albania\"\>", ",", "\<\"UN-CTS\"\>", ",", "2561.`", ",", 
+     "82.1`", ",", "2321.`", ",", "74.8`", ",", "2592.`", ",", "84.`", ",", 
+     "2857.`", ",", "93.3`", ",", "2790.`", ",", "92.`", ",", "4916.`", ",", 
+     "163.7`", ",", "4667.`", ",", "157.`", ",", "4657.`", ",", "158.`", ",", 
+     "4659.`", ",", "159.1`", ",", "4618.`", ",", "158.5`", ",", "4998.`", 
+     ",", "172.1`", ",", "5689.`", ",", "196.4`", ",", "5981.`", ",", 
+     "206.9`", ",", "6031.`", ",", "209.`", ",", "5674.`", ",", "196.7`", ",",
+      "5316.`", ",", "184.4`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Southern Europe\"\>", 
+     ",", "\<\"Croatia\"\>", ",", "\<\"UN-CTS\"\>", ",", "2805.`", ",", 
+     "63.9`", ",", "3029.`", ",", "69.1`", ",", "3485.`", ",", "79.6`", ",", 
+     "3833.`", ",", "87.7`", ",", "4290.`", ",", "98.3`", ",", "4734.`", ",", 
+     "108.8`", ",", "4891.`", ",", "112.7`", ",", "5165.`", ",", "119.3`", 
+     ",", "5084.`", ",", "117.9`", ",", "4741.`", ",", "110.4`", ",", 
+     "4352.`", ",", "101.8`", ",", "3763.`", ",", "88.4`", ",", "3341.`", ",",
+      "78.9`", ",", "3108.`", ",", "73.8`", ",", "3190.`", ",", "76.3`", ",", 
+     "3217.`", ",", "77.4`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Southern Europe\"\>", 
+     ",", "\<\"Greece\"\>", ",", "\<\"UN-CTS/WPB-ICPR\"\>", ",", "8726.`", 
+     ",", "77.8`", ",", "8722.`", ",", "77.6`", ",", "9964.`", ",", "88.8`", 
+     ",", "10370.`", ",", "92.7`", ",", "11645.`", ",", "104.7`", ",", 
+     "11736.`", ",", "106.3`", ",", "11364.`", ",", "103.7`", ",", "12349.`", 
+     ",", "113.4`", ",", "12479.`", ",", "115.2`", ",", "12475.`", ",", 
+     "115.7`", ",", "12693.`", ",", "118.2`", ",", "11798.`", ",", "110.3`", 
+     ",", "9611.`", ",", "90.2`", ",", "9560.`", ",", "90.1`", ",", "10011.`",
+      ",", "94.7`", ",", "10654.`", ",", "101.3`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Southern Europe\"\>", 
+     ",", "\<\"Italy\"\>", ",", "\<\"UN-CTS\"\>", ",", "54993.`", ",", 
+     "95.5`", ",", "56903.`", ",", "98.2`", ",", "60415.`", ",", "103.7`", 
+     ",", "39794.`", ",", "68.`", ",", "49697.`", ",", "84.6`", ",", 
+     "59284.`", ",", "100.6`", ",", "65598.`", ",", "111.`", ",", "69263.`", 
+     ",", "116.8`", ",", "68325.`", ",", "114.7`", ",", "67102.`", ",", 
+     "112.1`", ",", "63848.`", ",", "106.1`", ",", "54745.`", ",", "90.6`", 
+     ",", "53410.`", ",", "88.2`", ",", "55978.`", ",", "92.3`", ",", 
+     "59038.`", ",", "97.3`", ",", "61131.`", ",", "100.8`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Southern Europe\"\>", 
+     ",", "\<\"Malta\"\>", ",", "\<\"UN-CTS/NSO\"\>", ",", "278.`", ",", 
+     "69.3`", ",", "298.`", ",", "73.9`", ",", "294.`", ",", "72.6`", ",", 
+     "375.`", ",", "92.4`", ",", "528.`", ",", "129.4`", ",", "662.`", ",", 
+     "161.9`", ",", "494.`", ",", "119.9`", ",", "584.`", ",", "141.1`", ",", 
+     "584.`", ",", "139.7`", ",", "585.`", ",", "138.6`", ",", "615.`", ",", 
+     "144.4`", ",", "581.`", ",", "135.1`", ",", "569.`", ",", "131.1`", ",", 
+     "553.`", ",", "126.8`", ",", "591.`", ",", "134.9`", ",", "619.`", ",", 
+     "141.`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Southern Europe\"\>", 
+     ",", "\<\"Montenegro\"\>", ",", "\<\"UN-CTS\"\>", ",", "741.`", ",", 
+     "120.7`", ",", "799.`", ",", "129.9`", ",", "894.`", ",", "145.1`", ",", 
+     "851.`", ",", "137.7`", ",", "957.`", ",", "154.4`", ",", "1216.`", ",", 
+     "195.8`", ",", "1499.`", ",", "240.6`", ",", "1457.`", ",", "233.5`", 
+     ",", "1328.`", ",", "212.5`", ",", "1331.`", ",", "212.6`", ",", 
+     "1064.`", ",", "170.`", ",", "1123.`", ",", "179.1`", ",", "1131.`", ",",
+      "180.4`", ",", "1123.`", ",", "179.1`", ",", "1119.`", ",", "178.2`", 
+     ",", "1125.`", ",", "179.1`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Southern Europe\"\>", 
+     ",", "\<\"Portugal\"\>", ",", "\<\"UN-CTS\"\>", ",", "13835.`", ",", 
+     "132.6`", ",", "13152.`", ",", "125.6`", ",", "12889.`", ",", "122.7`", 
+     ",", "12636.`", ",", "119.9`", ",", "11587.`", ",", "109.6`", ",", 
+     "10807.`", ",", "102.`", ",", "11287.`", ",", "106.4`", ",", "11839.`", 
+     ",", "111.7`", ",", "12955.`", ",", "122.6`", ",", "13875.`", ",", 
+     "131.8`", ",", "14535.`", ",", "138.8`", ",", "14198.`", ",", "136.3`", 
+     ",", "14373.`", ",", "138.6`", ",", "13917.`", ",", "134.8`", ",", 
+     "13587.`", ",", "132.1`", ",", "13021.`", ",", "127.`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Southern Europe\"\>", 
+     ",", "\<\"Serbia\"\>", ",", "\<\"UN-CTS/WPB-ICPR\"\>", ",", "7487.`", 
+     ",", "98.7`", ",", "7654.`", ",", "101.5`", ",", "8078.`", ",", "107.9`",
+      ",", "7893.`", ",", "106.3`", ",", "9043.`", ",", "122.7`", ",", 
+     "9701.`", ",", "132.7`", ",", "10975.`", ",", "151.1`", ",", "11211.`", 
+     ",", "155.4`", ",", "11070.`", ",", "154.3`", ",", "10226.`", ",", 
+     "143.3`", ",", "10031.`", ",", "141.4`", ",", "10288.`", ",", "145.4`", 
+     ",", "10064.`", ",", "142.2`", ",", "10672.`", ",", "151.6`", ",", 
+     "10807.`", ",", "154.4`", ",", "10871.`", ",", "156.4`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Southern Europe\"\>", 
+     ",", "\<\"Slovenia\"\>", ",", "\<\"UN-CTS\"\>", ",", "1070.`", ",", 
+     "53.8`", ",", "1085.`", ",", "54.5`", ",", "1132.`", ",", "56.7`", ",", 
+     "1301.`", ",", "65.`", ",", "1336.`", ",", "66.4`", ",", "1318.`", ",", 
+     "65.2`", ",", "1365.`", ",", "67.1`", ",", "1351.`", ",", "66.1`", ",", 
+     "1273.`", ",", "62.1`", ",", "1377.`", ",", "66.9`", ",", "1360.`", ",", 
+     "65.9`", ",", "1522.`", ",", "73.6`", ",", "1399.`", ",", "67.6`", ",", 
+     "1308.`", ",", "63.1`", ",", "1316.`", ",", "63.4`", ",", "1396.`", ",", 
+     "67.2`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Southern Europe\"\>", 
+     ",", "\<\"Spain\"\>", ",", "\<\"UN-CTS\"\>", ",", "56096.`", ",", 
+     "131.7`", ",", "59375.`", ",", "137.1`", ",", "61054.`", ",", "138.7`", 
+     ",", "64021.`", ",", "143.1`", ",", "67100.`", ",", "147.7`", ",", 
+     "73558.`", ",", "159.7`", ",", "76079.`", ",", "163.3`", ",", "73929.`", 
+     ",", "157.5`", ",", "70472.`", ",", "149.7`", ",", "68597.`", ",", 
+     "145.8`", ",", "66765.`", ",", "142.3`", ",", "65017.`", ",", "139.`", 
+     ",", "61614.`", ",", "132.`", ",", "59589.`", ",", "127.8`", ",", 
+     "58814.`", ",", "126.1`", ",", "58883.`", ",", "126.1`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Western Europe\"\>", 
+     ",", "\<\"Germany\"\>", ",", "\<\"UN-CTS\"\>", ",", "80829.`", ",", 
+     "99.`", ",", "80933.`", ",", "99.1`", ",", "80201.`", ",", "98.3`", ",", 
+     "78063.`", ",", "95.8`", ",", "75153.`", ",", "92.5`", ",", "73793.`", 
+     ",", "91.`", ",", "72295.`", ",", "89.4`", ",", "70827.`", ",", "87.6`", 
+     ",", "69543.`", ",", "86.`", ",", "68533.`", ",", "84.6`", ",", 
+     "66221.`", ",", "81.6`", ",", "63228.`", ",", "77.6`", ",", "63020.`", 
+     ",", "77.1`", ",", "64291.`", ",", "78.2`", ",", "65841.`", ",", "79.7`",
+      ",", "65762.`", ",", "79.1`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Western Europe\"\>", 
+     ",", "\<\"Netherlands\"\>", ",", "\<\"UN-CTS\"\>", ",", "16184.`", ",", 
+     "99.9`", ",", "18766.`", ",", "115.2`", ",", "17560.`", ",", "107.3`", 
+     ",", "16091.`", ",", "97.9`", ",", "15151.`", ",", "91.8`", ",", 
+     "14610.`", ",", "88.2`", ",", "14364.`", ",", "86.4`", ",", "14368.`", 
+     ",", "86.1`", ",", "13969.`", ",", "83.5`", ",", "13473.`", ",", "80.2`",
+      ",", "12721.`", ",", "75.5`", ",", "11934.`", ",", "70.6`", ",", 
+     "10850.`", ",", "64.1`", ",", "10601.`", ",", "62.4`", ",", "10874.`", 
+     ",", "63.9`", ",", "11251.`", ",", "65.9`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Europe\"\>", ",", "\<\"Western Europe\"\>", 
+     ",", "\<\"Switzerland\"\>", ",", "\<\"UN-CTS\"\>", ",", "4842.`", ",", 
+     "66.6`", ",", "5509.`", ",", "75.2`", ",", "5723.`", ",", "77.5`", ",", 
+     "5567.`", ",", "74.6`", ",", "5278.`", ",", "70.`", ",", "5303.`", ",", 
+     "69.6`", ",", "5605.`", ",", "72.7`", ",", "5765.`", ",", "73.8`", ",", 
+     "5626.`", ",", "71.2`", ",", "6102.`", ",", "76.2`", ",", "6634.`", ",", 
+     "81.8`", ",", "6519.`", ",", "79.4`", ",", "6498.`", ",", "78.3`", ",", 
+     "6507.`", ",", "77.6`", ",", "6564.`", ",", "77.6`", ",", "6602.`", ",", 
+     "77.4`"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8274080321981544`*^9},
+ CellLabel->"Out[66]=",ExpressionUUID->"656b68f1-55d5-4ec3-829e-1f7b28222762"]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
@@ -62,8 +448,7 @@ stevilo_zapornikov_absolutno.xlsx\>\"", "]"}], "[",
    3.8261020331457634`*^9}, 3.8261020657038116`*^9, {3.826102115608436*^9, 
    3.8261021332029743`*^9}, 3.826102418050724*^9, {3.8261100850521755`*^9, 
    3.8261100888822975`*^9}},
- CellLabel->
-  "In[128]:=",ExpressionUUID->"01b131bc-be51-4252-bc3a-198a828d51b6"],
+ CellLabel->"In[1]:=",ExpressionUUID->"01b131bc-be51-4252-bc3a-198a828d51b6"],
 
 Cell[BoxData[
  RowBox[{
@@ -109,6 +494,78 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{
+  RowBox[{"zapornikiSlovenija0318ABS", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Select", "[", 
+      RowBox[{"steviloZapornikovEvropa", ",", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "3", "]"}], "]"}], " ", "\[Equal]", " ", 
+         "\"\<Slovenia\>\""}], "&"}]}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"5", ";;", 
+      RowBox[{"-", "1"}], ";;", "2"}], "]"}], "]"}]}], ";", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "Seznam", " ", "absolutnih", " ", "vrednosti", " ", "\[SHacek]tevila", 
+     " ", "zapornikov", " ", "med", " ", "leti", " ", "2003"}], " ", "-", " ", 
+    RowBox[{"2018", " ", "v", " ", "republiki", " ", 
+     RowBox[{"Sloveniji", "."}]}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.827393451682888*^9, 3.827393509068462*^9}, {
+   3.8273941157041216`*^9, 3.8273942111807847`*^9}, {3.8273942602674084`*^9, 
+   3.8273943432103753`*^9}, 3.8273960930997086`*^9, {3.827408156243947*^9, 
+   3.8274081579704213`*^9}},
+ CellLabel->"In[67]:=",ExpressionUUID->"71984ddf-3201-4550-8cc3-12c6d5b0876c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"zapornikiSlovenija0318Rel", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Select", "[", 
+      RowBox[{"steviloZapornikovEvropa", ",", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "3", "]"}], "]"}], " ", "\[Equal]", " ", 
+         "\"\<Slovenia\>\""}], "&"}]}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"6", ";;", 
+      RowBox[{"-", "1"}], ";;", "2"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Seznam", " ", "relativnih", " ", "vrednosti", " ", "\[SHacek]tevila", " ",
+     "zapornikov", " ", "na", " ", "100.000", " ", "prebivalcev", " ", "v", 
+    " ", "republiki", " ", 
+    RowBox[{"Sloveniji", "."}]}], "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.8274081746945004`*^9, 3.8274082083867764`*^9}, {
+  3.82740897842349*^9, 3.8274090070920024`*^9}, {3.8274090840297804`*^9, 
+  3.827409140217931*^9}},ExpressionUUID->"2fd7342d-cd5a-4afd-933a-\
+df6f44276584"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "53.8`", ",", "54.5`", ",", "56.7`", ",", "65.`", ",", "66.4`", ",", 
+   "65.2`", ",", "67.1`", ",", "66.1`", ",", "62.1`", ",", "66.9`", ",", 
+   "65.9`", ",", "73.6`", ",", "67.6`", ",", "63.1`", ",", "63.4`", ",", 
+   "67.2`"}], "}"}]], "Output",
+ CellChangeTimes->{{3.8274089883559237`*^9, 3.827409008564206*^9}, 
+   3.82740908756837*^9},
+ CellLabel->"Out[76]=",ExpressionUUID->"7141a7be-1378-49ee-b291-9fb1254f5865"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
   RowBox[{"zapornikiSlovenija", " ", "=", " ", 
    RowBox[{"Select", "[", 
     RowBox[{"steviloZapornikovAbs", ",", " ", 
@@ -119,19 +576,19 @@ Cell[BoxData[
        "\"\<Slovenia\>\""}], "&"}]}], "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.826116954092538*^9, 3.826116964401148*^9}, {
    3.8261172658391542`*^9, 3.82611731976857*^9}, 3.8261183947460737`*^9},
- CellLabel->
-  "In[144]:=",ExpressionUUID->"beebc0a9-7395-4939-90a9-8c6a89d9da83"],
+ CellLabel->"In[28]:=",ExpressionUUID->"beebc0a9-7395-4939-90a9-8c6a89d9da83"],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{
-   RowBox[{"zapornikiSlovenija", "[", 
-    RowBox[{"[", "1", "]"}], "]"}], "[", 
-   RowBox[{"[", 
-    RowBox[{"2", ";;", 
-     RowBox[{"Length", "[", 
-      RowBox[{"zapornikiSlovenija", "[", 
-       RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}], "]"}], ";", " ", 
+   RowBox[{
+    RowBox[{"zapornikiSlovenija", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"2", ";;", 
+      RowBox[{"Length", "[", 
+       RowBox[{"zapornikiSlovenija", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}], "]"}], ";"}], " ", 
   RowBox[{"(*", 
    RowBox[{
    "\[CapitalSHacek]tevilo", " ", "zaprtih", " ", "po", " ", "letih", " ", 
@@ -145,29 +602,17 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"zapornikiSlovenijaTS", " ", "=", " ", 
-  RowBox[{"TimeSeries", "[", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"zapornikiSlovenija", "[", 
-      RowBox[{"[", "1", "]"}], "]"}], "[", 
-     RowBox[{"[", 
-      RowBox[{"2", ";;", 
-       RowBox[{"Length", "[", 
-        RowBox[{"zapornikiSlovenija", "[", 
-         RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}], "]"}], ",", " ", 
-    RowBox[{"{", 
-     RowBox[{"Range", "[", 
-      RowBox[{"2009", ",", " ", "2018"}], "]"}], "}"}]}], "]"}], 
-  RowBox[{"(*", 
-   RowBox[{"\[CapitalCHacek]asovna", " ", "vrsta", " ", "zaporniki", " ", 
-    RowBox[{"Slovenija", "."}]}], "*)"}]}]], "Input",
- CellChangeTimes->{{3.826117336143086*^9, 3.826117337159092*^9}, {
-  3.8261173909099226`*^9, 3.8261174854690924`*^9}, {3.826117587976141*^9, 
-  3.826117605785164*^9}, {3.826117686643217*^9, 3.8261177087662587`*^9}, {
-  3.82611782964268*^9, 3.8261178337601604`*^9}},
- CellLabel->
-  "In[132]:=",ExpressionUUID->"dd370f9c-dfd3-4a67-8414-b0fa5210043c"],
+ RowBox[{
+  RowBox[{"zapornikiSlovenijaTS0318Rel", " ", "=", " ", 
+   RowBox[{"TimeSeries", "[", 
+    RowBox[{"zapornikiSlovenija0318Rel", ",", 
+     RowBox[{"{", 
+      RowBox[{"Range", "[", 
+       RowBox[{"2003", ",", " ", "2018"}], "]"}], "}"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.8274096537717714`*^9, 
+  3.8274097064175158`*^9}},ExpressionUUID->"a12f4ec5-cc54-492c-b949-\
+1e419aa46660"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -195,31 +640,32 @@ Cell[BoxData[
                    RGBColor[0.368417, 0.506779, 0.709798], 
                    AbsoluteThickness[1.6]], 
                   LineBox[CompressedData["
-1:eJwV0X1Q03UcB/DFUggSFuJIHoPpQOQOwkAe663WMUXG460pxkMEouIYDoQk
-Hs12wBmov++wCL8+FE+ZSINLkAiigG4HsnNAGpCd0YXobZgEFrK+/fG5z73+
-+Tx6vJsTn2HB4/HCWfyfm8Otebz3KMauKc3mBALr9dpwDXPe4mvXhqMIfPyP
-u4RkUHS8U5l7bydB8qDrq3rmKXFKbE0owTanl/ZkZlIEnRH8dTCAYKjDba3V
-QQo31/jWmi0EimHB0gXmlRc2FEs9CAyertU7syiy0t0buiwJpkLzRfeZlwWS
-AN0EhyVdu6nwEEXv3dst4hYO+itWac6HKeKFyTnNBRx6n+xaq2V2UUQ55u3m
-EM3XtUUeoaha3aT0duHwqTx75U9mh+eeCfnz5/Cv+HFxaTarP57io3Pk4BR+
-9rLnUYraw1k29vs5/GJbovueedkq6EvPeg7X90u3yBUUZZOGobFJDrseBfv8
-wxyc/orXpY0ED5YtU8/kUAjcI/h2bxPERC0EByop+s1PtxeUEciSxMIJ5j1G
-lXo4n0D5+xve2bmsn6E/QX+EYHeHatr2GIWXZVwUP40g8Fn1UCNzkV/Hdw9l
-BAN8U2eYimJdn928VTSBIE4ROc1sari6Q8rur3TUr8vLo7hniO1VVhLUbJIW
-OOZTlHiqSu+Y2DxG4ew3zKs5J5eTZRqItv2gjj5OIT7g/cCuU4POb6tHjMxV
-Lyrs+5zrkNS/XaIuoNAkSbT1RXW4UuE35FxI0Rbmu7epuw4tVTvmephHUise
-hR2tw4BNMBLep4jZZ7+Zt7kO9bcloX8zqxMtzO0TGqgdXj/08QkKkcg359xp
-DTasL/1MVEQxZ1gYvf+WBmnyu8d+ZM6odNR7LBP0CZ1KDnxA0TfX5et+k2DG
-Oc+XV0whfLk7wMTueWFm468XmSemR9rHIglynT4fDCqhGP+kNV1tT8BvkMTd
-YTb6+Tv3/cyh+bxekFtKIekpWXPrMgdjXKNhTRmFfGQlZE7JYTGOhDUxS0YT
-YzyqONjqsiYjyin8u1OaWy5xmK2SCX9jHtaeKt56k0OyVe2+8gqK69Ly1UAD
-h/nVr/TCkxQ3DH4DtfMcgsL/eHiDWZn1lD/7PAF5bBER+yH7V9FppY07wdfG
-EP8nzKkLU9Y/RbD5W3u8yCnWbzFFtZRE8OaMKHHrR2z/q12D7oUE4/IvRKPM
-piZeW6OG4MReG+9MNfu3zK3CS0sgH1g0m5nLLjqsmm8R/AfYib/m
+1:eJwVU3tQ1GUUXQkiaBgDKgLBUVlRFkHIMl6bB4JIFvh9y0MeuvJadnktDwEV
+RURWXAZLVhBQAr5FkYgycCMbiBlAEqSWQBTX0uEhDCFgSaAwCtGvP+7cOXNm
+zr3nnrmbY1ID43Q4HI47W//37vXGHI4fxScXJqWSKV8YZ/HiXrJ4QisHs+IL
+H2Lxh0EARXWy/+P1bwtQ7ftIqM9QWAebKvk8Ab616x1cY3G9s+vIqz0CXMkv
+jDQSUtydsx41LRKgbXnD/BuBFF9cMgvwHBCgdbKgxDyIYkydlOtm4Yf0H99z
+2xpMUTertXTN88Per09MbQyhCB0uCfGU+8PAuLXWfh/FM5P4cm5VAGYqeiJ5
+oRQ9OnVLBy4zkOutcreEUTR+Z31/xZNA94nBS4dwioW+xmv5EQT1s9N3bCMo
+Njk7nM9KI3AU17S67KeQLj3ko5DgUHdOg9cBCqN5Q1HGBYJhD/tKvohCdnjd
+ld5TBJt2t3wpOEjB4TYVKGQEZ/caqXwiKeyb+n9VsfqjQ+4tYVEUxw1dpCGh
+BLOeZQPiaIrps62/2x0hMBvqeHowhmJzeG/KKKu/Q9u5ISWWvY/N9wLTHwii
+X5X6JYkp9jXbVF/vIAh4XXk6No7izDqJlUMzAVcRo0mTUNgs8lXhlMBim75Z
+spT1v7jwvK6YYNk9Pz0nnkKyXavnKyU452JzV5FAMaXzoCqdS+AdUvXRqUQK
+f97lfx01DCanpr8pTqLojwh/8MKLQV2FvvXnyay/lYg741EMLHcytXIZi70s
++6KeM8hxl+1UplB8sLVE5iEgWI0XdRalsnrqoenkcgLJm9zoyjQK14kwxUIT
+wd+adt2L6Wwev2j8zVUETlm5TcpDFEWfqmvPKQn2l76bWJNBMRPruKw+SXB1
+MG9bZSbFwIdOCX3dBFp512JjFsXI1bZyEx8hblrZ9d04TCEqCN+91CtE/32J
+qvkIhceOyYpdCESnXrai4yjr/2PdS6UbA3EvSJTens36fyGZ+KlDCFVhYkzL
+MZbnZeR2xQgRvCsgtus4y9uY2o6vEtiuviZtz2Hnve8jS7hOMOWuPKY5QXHD
+e/jphJjdN9a7TJtL8Vvm48SfzQnmGzTqwZMU/FvXXOK/YpAq5o2N5FF0i1al
+28sYGO2JeOvhKYrm7tsJ1TUMSoujyFw+hbzMufpRA4OhnuKKZTlFtof4nTk1
+Ayer8+P/nKYw3NJ46zNTgqNP4t10zlBY1M9MtwURjN0zubjGYs5Nb+GfbN78
+Z3+trSnY/8zsuK3REPwHtQC8bA==
                    "]]}, 
-                 Annotation[#, "Charting`Private`Tag$43945#1"]& ]}}, {}}, {
+                 Annotation[#, "Charting`Private`Tag$17436#1"]& ]}}, {}}, {
              DisplayFunction -> Identity, Ticks -> {Automatic, Automatic}, 
-              AxesOrigin -> {2009., 1274.7530173808964`}, 
+              AxesOrigin -> {2003., 53.800000177966034`}, 
               FrameTicks -> {{{}, {}}, {{}, {}}}, GridLines -> {None, None}, 
               DisplayFunction -> Identity, PlotRangePadding -> {{
                  Scaled[0.1], 
@@ -228,7 +674,7 @@ piZeW6OG4MReG+9MNfu3zK3CS0sgH1g0m5nLLjqsmm8R/AfYib/m
                  Scaled[0.1]}}, PlotRangeClipping -> True, ImagePadding -> 
               All, DisplayFunction -> Identity, AspectRatio -> 1, 
               Axes -> {False, False}, AxesLabel -> {None, None}, 
-              AxesOrigin -> {2009., 1274.7530173808964`}, DisplayFunction :> 
+              AxesOrigin -> {2003., 53.800000177966034`}, DisplayFunction :> 
               Identity, Frame -> {{True, True}, {True, True}}, 
               FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
               Directive[
@@ -262,8 +708,8 @@ piZeW6OG4MReG+9MNfu3zK3CS0sgH1g0m5nLLjqsmm8R/AfYib/m
                     Part[#, 1]], 
                     (Identity[#]& )[
                     Part[#, 2]]}& )}}, 
-              PlotRange -> {{2009, 2018}, {1274.7530173808964`, 
-                1518.6633765136173`}}, PlotRangeClipping -> True, 
+              PlotRange -> {{2003, 2018}, {53.800000177966034`, 
+                73.00314900667674}}, PlotRangeClipping -> True, 
               PlotRangePadding -> {{
                  Scaled[0.1], 
                  Scaled[0.1]}, {
@@ -275,7 +721,7 @@ piZeW6OG4MReG+9MNfu3zK3CS0sgH1g0m5nLLjqsmm8R/AfYib/m
                   RowBox[{
                     TagBox["\"Time: \"", "SummaryItemAnnotation"], 
                     "\[InvisibleSpace]", 
-                    TagBox["2009", "SummaryItem"]}], 
+                    TagBox["2003", "SummaryItem"]}], 
                   RowBox[{
                     TagBox["\" to \"", "SummaryItemAnnotation"], 
                     "\[InvisibleSpace]", 
@@ -284,7 +730,7 @@ piZeW6OG4MReG+9MNfu3zK3CS0sgH1g0m5nLLjqsmm8R/AfYib/m
                RowBox[{
                  TagBox["\"Data points: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
-                 TagBox["10", "SummaryItem"]}], "\[SpanFromLeft]"}}, 
+                 TagBox["16", "SummaryItem"]}], "\[SpanFromLeft]"}}, 
              GridBoxAlignment -> {
               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
              False, GridBoxItemSize -> {
@@ -315,31 +761,32 @@ piZeW6OG4MReG+9MNfu3zK3CS0sgH1g0m5nLLjqsmm8R/AfYib/m
                    RGBColor[0.368417, 0.506779, 0.709798], 
                    AbsoluteThickness[1.6]], 
                   LineBox[CompressedData["
-1:eJwV0X1Q03UcB/DFUggSFuJIHoPpQOQOwkAe663WMUXG460pxkMEouIYDoQk
-Hs12wBmov++wCL8+FE+ZSINLkAiigG4HsnNAGpCd0YXobZgEFrK+/fG5z73+
-+Tx6vJsTn2HB4/HCWfyfm8Otebz3KMauKc3mBALr9dpwDXPe4mvXhqMIfPyP
-u4RkUHS8U5l7bydB8qDrq3rmKXFKbE0owTanl/ZkZlIEnRH8dTCAYKjDba3V
-QQo31/jWmi0EimHB0gXmlRc2FEs9CAyertU7syiy0t0buiwJpkLzRfeZlwWS
-AN0EhyVdu6nwEEXv3dst4hYO+itWac6HKeKFyTnNBRx6n+xaq2V2UUQ55u3m
-EM3XtUUeoaha3aT0duHwqTx75U9mh+eeCfnz5/Cv+HFxaTarP57io3Pk4BR+
-9rLnUYraw1k29vs5/GJbovueedkq6EvPeg7X90u3yBUUZZOGobFJDrseBfv8
-wxyc/orXpY0ED5YtU8/kUAjcI/h2bxPERC0EByop+s1PtxeUEciSxMIJ5j1G
-lXo4n0D5+xve2bmsn6E/QX+EYHeHatr2GIWXZVwUP40g8Fn1UCNzkV/Hdw9l
-BAN8U2eYimJdn928VTSBIE4ROc1sari6Q8rur3TUr8vLo7hniO1VVhLUbJIW
-OOZTlHiqSu+Y2DxG4ew3zKs5J5eTZRqItv2gjj5OIT7g/cCuU4POb6tHjMxV
-Lyrs+5zrkNS/XaIuoNAkSbT1RXW4UuE35FxI0Rbmu7epuw4tVTvmephHUise
-hR2tw4BNMBLep4jZZ7+Zt7kO9bcloX8zqxMtzO0TGqgdXj/08QkKkcg359xp
-DTasL/1MVEQxZ1gYvf+WBmnyu8d+ZM6odNR7LBP0CZ1KDnxA0TfX5et+k2DG
-Oc+XV0whfLk7wMTueWFm468XmSemR9rHIglynT4fDCqhGP+kNV1tT8BvkMTd
-YTb6+Tv3/cyh+bxekFtKIekpWXPrMgdjXKNhTRmFfGQlZE7JYTGOhDUxS0YT
-YzyqONjqsiYjyin8u1OaWy5xmK2SCX9jHtaeKt56k0OyVe2+8gqK69Ly1UAD
-h/nVr/TCkxQ3DH4DtfMcgsL/eHiDWZn1lD/7PAF5bBER+yH7V9FppY07wdfG
-EP8nzKkLU9Y/RbD5W3u8yCnWbzFFtZRE8OaMKHHrR2z/q12D7oUE4/IvRKPM
-piZeW6OG4MReG+9MNfu3zK3CS0sgH1g0m5nLLjqsmm8R/AfYib/m
+1:eJwVU3tQ1GUUXQkiaBgDKgLBUVlRFkHIMl6bB4JIFvh9y0MeuvJadnktDwEV
+RURWXAZLVhBQAr5FkYgycCMbiBlAEqSWQBTX0uEhDCFgSaAwCtGvP+7cOXNm
+zr3nnrmbY1ID43Q4HI47W//37vXGHI4fxScXJqWSKV8YZ/HiXrJ4QisHs+IL
+H2Lxh0EARXWy/+P1bwtQ7ftIqM9QWAebKvk8Ab616x1cY3G9s+vIqz0CXMkv
+jDQSUtydsx41LRKgbXnD/BuBFF9cMgvwHBCgdbKgxDyIYkydlOtm4Yf0H99z
+2xpMUTertXTN88Per09MbQyhCB0uCfGU+8PAuLXWfh/FM5P4cm5VAGYqeiJ5
+oRQ9OnVLBy4zkOutcreEUTR+Z31/xZNA94nBS4dwioW+xmv5EQT1s9N3bCMo
+Njk7nM9KI3AU17S67KeQLj3ko5DgUHdOg9cBCqN5Q1HGBYJhD/tKvohCdnjd
+ld5TBJt2t3wpOEjB4TYVKGQEZ/caqXwiKeyb+n9VsfqjQ+4tYVEUxw1dpCGh
+BLOeZQPiaIrps62/2x0hMBvqeHowhmJzeG/KKKu/Q9u5ISWWvY/N9wLTHwii
+X5X6JYkp9jXbVF/vIAh4XXk6No7izDqJlUMzAVcRo0mTUNgs8lXhlMBim75Z
+spT1v7jwvK6YYNk9Pz0nnkKyXavnKyU452JzV5FAMaXzoCqdS+AdUvXRqUQK
+f97lfx01DCanpr8pTqLojwh/8MKLQV2FvvXnyay/lYg741EMLHcytXIZi70s
++6KeM8hxl+1UplB8sLVE5iEgWI0XdRalsnrqoenkcgLJm9zoyjQK14kwxUIT
+wd+adt2L6Wwev2j8zVUETlm5TcpDFEWfqmvPKQn2l76bWJNBMRPruKw+SXB1
+MG9bZSbFwIdOCX3dBFp512JjFsXI1bZyEx8hblrZ9d04TCEqCN+91CtE/32J
+qvkIhceOyYpdCESnXrai4yjr/2PdS6UbA3EvSJTens36fyGZ+KlDCFVhYkzL
+MZbnZeR2xQgRvCsgtus4y9uY2o6vEtiuviZtz2Hnve8jS7hOMOWuPKY5QXHD
+e/jphJjdN9a7TJtL8Vvm48SfzQnmGzTqwZMU/FvXXOK/YpAq5o2N5FF0i1al
+28sYGO2JeOvhKYrm7tsJ1TUMSoujyFw+hbzMufpRA4OhnuKKZTlFtof4nTk1
+Ayer8+P/nKYw3NJ46zNTgqNP4t10zlBY1M9MtwURjN0zubjGYs5Nb+GfbN78
+Z3+trSnY/8zsuK3REPwHtQC8bA==
                    "]]}, 
-                 Annotation[#, "Charting`Private`Tag$43945#1"]& ]}}, {}}, {
+                 Annotation[#, "Charting`Private`Tag$17436#1"]& ]}}, {}}, {
              DisplayFunction -> Identity, Ticks -> {Automatic, Automatic}, 
-              AxesOrigin -> {2009., 1274.7530173808964`}, 
+              AxesOrigin -> {2003., 53.800000177966034`}, 
               FrameTicks -> {{{}, {}}, {{}, {}}}, GridLines -> {None, None}, 
               DisplayFunction -> Identity, PlotRangePadding -> {{
                  Scaled[0.1], 
@@ -348,7 +795,7 @@ piZeW6OG4MReG+9MNfu3zK3CS0sgH1g0m5nLLjqsmm8R/AfYib/m
                  Scaled[0.1]}}, PlotRangeClipping -> True, ImagePadding -> 
               All, DisplayFunction -> Identity, AspectRatio -> 1, 
               Axes -> {False, False}, AxesLabel -> {None, None}, 
-              AxesOrigin -> {2009., 1274.7530173808964`}, DisplayFunction :> 
+              AxesOrigin -> {2003., 53.800000177966034`}, DisplayFunction :> 
               Identity, Frame -> {{True, True}, {True, True}}, 
               FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
               Directive[
@@ -382,8 +829,8 @@ piZeW6OG4MReG+9MNfu3zK3CS0sgH1g0m5nLLjqsmm8R/AfYib/m
                     Part[#, 1]], 
                     (Identity[#]& )[
                     Part[#, 2]]}& )}}, 
-              PlotRange -> {{2009, 2018}, {1274.7530173808964`, 
-                1518.6633765136173`}}, PlotRangeClipping -> True, 
+              PlotRange -> {{2003, 2018}, {53.800000177966034`, 
+                73.00314900667674}}, PlotRangeClipping -> True, 
               PlotRangePadding -> {{
                  Scaled[0.1], 
                  Scaled[0.1]}, {
@@ -395,7 +842,7 @@ piZeW6OG4MReG+9MNfu3zK3CS0sgH1g0m5nLLjqsmm8R/AfYib/m
                   RowBox[{
                     TagBox["\"Time: \"", "SummaryItemAnnotation"], 
                     "\[InvisibleSpace]", 
-                    TagBox["2009", "SummaryItem"]}], 
+                    TagBox["2003", "SummaryItem"]}], 
                   RowBox[{
                     TagBox["\" to \"", "SummaryItemAnnotation"], 
                     "\[InvisibleSpace]", 
@@ -404,7 +851,7 @@ piZeW6OG4MReG+9MNfu3zK3CS0sgH1g0m5nLLjqsmm8R/AfYib/m
                RowBox[{
                  TagBox["\"Data points: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
-                 TagBox["10", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+                 TagBox["16", "SummaryItem"]}], "\[SpanFromLeft]"}, {
                RowBox[{
                  TagBox["\"Regular: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
@@ -445,52 +892,150 @@ piZeW6OG4MReG+9MNfu3zK3CS0sgH1g0m5nLLjqsmm8R/AfYib/m
      "SummaryPanel"],
     DynamicModuleValues:>{}], "]"}],
   TemporalData[
-  TimeSeries, {{{1365., 1351., 1273., 1377., 1360., 1522., 1399., 1308., 
-    1348., 1396.}}, {{2009, 2018, 1}}, 1, {"Continuous", 1}, {"Discrete", 1}, 
-    1, {ResamplingMethod -> {"Interpolation", InterpolationOrder -> 1}, 
+  TimeSeries, {{{53.8, 54.5, 56.7, 65., 66.4, 65.2, 67.1, 66.1, 62.1, 66.9, 
+    65.9, 73.6, 67.6, 63.1, 63.4, 67.2}}, {{2003, 2018, 1}}, 1, {
+    "Continuous", 1}, {"Discrete", 1}, 1, {
+    ResamplingMethod -> {"Interpolation", InterpolationOrder -> 1}, 
      ValueDimensions -> 1}}, False, 12.1],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
- CellChangeTimes->{3.826117711829379*^9, 3.8261178369719625`*^9},
+ CellChangeTimes->{3.827409702749218*^9},
+ CellLabel->"Out[78]=",ExpressionUUID->"ea760cc0-45c8-4457-a44d-d362c52d3f65"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"zapornikiSlovenijaTS0318ABS", " ", "=", " ", 
+   RowBox[{"TimeSeries", "[", 
+    RowBox[{"zapornikiSlovenija0318ABS", ",", 
+     RowBox[{"{", 
+      RowBox[{"Range", "[", 
+       RowBox[{"2003", ",", " ", "2018"}], "]"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalCHacek]asovna", " ", "vrsta", " ", "absolutnega", " ", 
+    "\[SHacek]tevila", " ", "zapornikov", " ", "v", " ", "republiki", " ", 
+    "Sloveniji", " ", "med", " ", "leti", " ", "2003", " ", "in", " ", 
+    "2018"}], "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.827395764590845*^9, 3.8273958013495646`*^9}, {
+  3.827395834615608*^9, 3.827395904505766*^9}, {3.827408161641592*^9, 
+  3.8274081621152487`*^9}},
+ CellLabel->"In[68]:=",ExpressionUUID->"235f95da-1272-4e5f-959f-fc6bfe7f2075"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"zapornikiSlovenijaTS", " ", "=", " ", 
+   RowBox[{"TimeSeries", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"zapornikiSlovenija", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ";;", 
+        RowBox[{"Length", "[", 
+         RowBox[{"zapornikiSlovenija", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}], "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"Range", "[", 
+       RowBox[{"2009", ",", " ", "2018"}], "]"}], "}"}]}], "]"}]}], 
+  RowBox[{"(*", 
+   RowBox[{"\[CapitalCHacek]asovna", " ", "vrsta", " ", "zaporniki", " ", 
+    RowBox[{"Slovenija", "."}]}], "*)"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.826117336143086*^9, 3.826117337159092*^9}, {
+  3.8261173909099226`*^9, 3.8261174854690924`*^9}, {3.826117587976141*^9, 
+  3.826117605785164*^9}, {3.826117686643217*^9, 3.8261177087662587`*^9}, {
+  3.82611782964268*^9, 3.8261178337601604`*^9}, {3.8273959848111506`*^9, 
+  3.8273959906347227`*^9}},
+ CellLabel->"In[49]:=",ExpressionUUID->"dd370f9c-dfd3-4a67-8414-b0fa5210043c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"ListLinePlot", "[", 
+   RowBox[{"zapornikiSlovenijaTS", ",", " ", 
+    RowBox[{"PlotLabel", "\[Rule]", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+      "\"\<\[CapitalSHacek]tevilo zaprtih oseb v Sloveniji med leti 2003 in \
+2018\>\"", ",", " ", "16", ",", " ", 
+       RowBox[{"Darker", "[", "Blue", "]"}], ",", " ", 
+       RowBox[{"Background", "\[Rule]", 
+        RowBox[{"Lighter", "[", "Yellow", "]"}]}]}], "]"}]}], ",", " ", 
+    RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", " ", 
+    RowBox[{"PlotTheme", "\[Rule]", "\"\<Detailed\>\""}]}], "]"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.826117841613056*^9, 3.826117855377061*^9}, {
+  3.826117899810449*^9, 3.826117900829089*^9}, {3.8261180040304546`*^9, 
+  3.8261180727194986`*^9}, {3.826118123638282*^9, 3.8261181243700247`*^9}, {
+  3.8261182289141517`*^9, 3.826118307308177*^9}, {3.827393378846654*^9, 
+  3.827393378990258*^9}, {3.827395960210842*^9, 
+  3.827395967249753*^9}},ExpressionUUID->"45edaab7-ee25-427b-9694-\
+90fbf02b4cc8"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ListLinePlot", "lpn", 
+   "\"\\!\\(\\*RowBox[{\\\"zapornikiSlovenijaTS\\\"}]\\) is not a list of \
+numbers or pairs of numbers.\"", 2, 25, 11, 18264473628504972513, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8273933799238873`*^9},
  CellLabel->
-  "Out[132]=",ExpressionUUID->"e1e18f65-bd36-4e0a-b638-31f212ecfa4b"]
+  "During evaluation of \
+In[25]:=",ExpressionUUID->"85ec0552-cfd7-4cd3-85e7-912876c5504c"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"ListLinePlot", "[", 
-  RowBox[{"zapornikiSlovenijaTS", ",", " ", 
+  RowBox[{"zapornikiSlovenijaTS0318Rel", ",", 
    RowBox[{"PlotLabel", "\[Rule]", 
-    RowBox[{"Style", "[", 
-     RowBox[{
-     "\"\<\[CapitalSHacek]tevilo zaprtih oseb v Sloveniji med leti 2009 in \
-2018\>\"", ",", " ", "16", ",", " ", 
-      RowBox[{"Darker", "[", "Blue", "]"}], ",", " ", 
-      RowBox[{"Background", "\[Rule]", 
-       RowBox[{"Lighter", "[", "Yellow", "]"}]}]}], "]"}]}], ",", " ", 
-   RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", " ", 
+    StyleBox[
+     "\"\<\[CapitalSHacek]tevilo zaprtih oseb v Sloveniji med leti 2003 in \
+2018 - \!\(\*StyleBox[\"Relativno\",StripOnInput->False,LineColor->RGBColor[0,\
+ 0, 
+Rational[2, 3]],FrontFaceColor->RGBColor[0, 0, 
+Rational[2, 3]],BackFaceColor->RGBColor[0, 0, 
+Rational[2, 3]],GraphicsColor->RGBColor[0, 0, 
+Rational[2, 3]],FontSize->16,FontColor->RGBColor[0, 0, 
+Rational[2, 3]],Background->RGBColor[1, 1, 
+Rational[1, 3]]]\)\>\"",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 
+       Rational[2, 3]],
+     FrontFaceColor->RGBColor[0, 0, 
+       Rational[2, 3]],
+     BackFaceColor->RGBColor[0, 0, 
+       Rational[2, 3]],
+     GraphicsColor->RGBColor[0, 0, 
+       Rational[2, 3]],
+     FontSize->16,
+     FontColor->RGBColor[0, 0, 
+       Rational[2, 3]],
+     Background->RGBColor[1, 1, 
+       Rational[1, 3]]]}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", 
    RowBox[{"PlotTheme", "\[Rule]", "\"\<Detailed\>\""}]}], "]"}]], "Input",
- CellChangeTimes->{{3.826117841613056*^9, 3.826117855377061*^9}, {
-  3.826117899810449*^9, 3.826117900829089*^9}, {3.8261180040304546`*^9, 
-  3.8261180727194986`*^9}, {3.826118123638282*^9, 3.8261181243700247`*^9}, {
-  3.8261182289141517`*^9, 3.826118307308177*^9}},
- CellLabel->
-  "In[142]:=",ExpressionUUID->"45edaab7-ee25-427b-9694-90fbf02b4cc8"],
+ CellChangeTimes->{{3.8274096109140244`*^9, 3.8274096239923067`*^9}},
+ CellLabel->"In[79]:=",ExpressionUUID->"aeb905fc-7b82-4d32-bfd9-bc69e25046c0"],
 
 Cell[BoxData[
  GraphicsBox[{{}, {{}, {}, 
     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
       NCache[
        Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
-     LineBox[{{2009., 1365.}, {2010., 1351.}, {2011., 1273.}, {2012., 
-      1377.}, {2013., 1360.}, {2014., 1522.}, {2015., 1399.}, {2016., 
-      1308.}, {2017., 1348.}, {2018., 1396.}}]}}, {{}, {}}},
+     LineBox[{{2003., 53.8}, {2004., 54.5}, {2005., 56.7}, {2006., 65.}, {
+      2007., 66.4}, {2008., 65.2}, {2009., 67.1}, {2010., 66.1}, {2011., 
+      62.1}, {2012., 66.9}, {2013., 65.9}, {2014., 73.6}, {2015., 67.6}, {
+      2016., 63.1}, {2017., 63.4}, {2018., 67.2}}]}}, {{}, {}}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{False, False},
   AxesLabel->{None, None},
-  AxesOrigin->{2008.8125000000002`, 1259.1666666666667`},
+  AxesOrigin->{2002.6875000000002`, 52.7},
   DisplayFunction->Identity,
   Frame->{{True, True}, {True, True}},
   FrameLabel->{{None, None}, {None, None}},
@@ -515,12 +1060,20 @@ Cell[BoxData[
          Part[#, 2]]}& )}},
   PlotLabel->FormBox[
     StyleBox[
-    "\"\[CapitalSHacek]tevilo zaprtih oseb v Sloveniji med leti 2009 in \
-2018\"", 16, 
+    "\"\[CapitalSHacek]tevilo zaprtih oseb v Sloveniji med leti 2003 in 2018 \
+- \\!\\(\\*StyleBox[\\\"Relativno\\\",StripOnInput->False,LineColor->RGBColor[\
+0, 0, Rational[2, 3]],FrontFaceColor->RGBColor[0, 0, Rational[2, \
+3]],BackFaceColor->RGBColor[0, 0, Rational[2, 3]],GraphicsColor->RGBColor[0, \
+0, Rational[2, 3]],FontSize->16,FontColor->RGBColor[0, 0, Rational[2, \
+3]],Background->RGBColor[1, 1, Rational[1, 3]]]\\)\"", LineColor -> 
      RGBColor[0, 0, 
-      Rational[2, 3]], Background -> RGBColor[1, 1, 
+       Rational[2, 3]], FrontFaceColor -> RGBColor[0, 0, 
+       Rational[2, 3]], $CellContext`BackFaceColor -> RGBColor[0, 0, 
+       Rational[2, 3]], GraphicsColor -> RGBColor[0, 0, 
+       Rational[2, 3]], FontSize -> 16, FontColor -> RGBColor[0, 0, 
+       Rational[2, 3]], Background -> RGBColor[1, 1, 
        Rational[1, 3]], StripOnInput -> False], TraditionalForm],
-  PlotRange->{{2008.8125000000002`, 2018.}, {1259.1666666666667`, 1522.}},
+  PlotRange->{{2002.6875000000002`, 2018.}, {52.7, 73.6}},
   PlotRangeClipping->True,
   PlotRangePadding->{{
      Scaled[0.02], 
@@ -528,156 +1081,64 @@ Cell[BoxData[
      Scaled[0.05], 
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{
-  3.826117856131981*^9, 3.8261179020813117`*^9, 3.82611800475644*^9, 
-   3.8261180436639776`*^9, 3.8261180737176285`*^9, 3.826118125017495*^9, {
-   3.8261182557978287`*^9, 3.8261183077836027`*^9}},
- CellLabel->
-  "Out[142]=",ExpressionUUID->"26170bfc-a0db-4322-a698-c0eb49d715d5"]
+ CellChangeTimes->{3.8274096261179657`*^9, 3.8274097089902534`*^9},
+ CellLabel->"Out[79]=",ExpressionUUID->"f1013268-3bdb-4916-88fc-3b9ec7dd53da"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"ListPlot", "[", 
-  RowBox[{"drzaveEUZaporniki", ",", " ", 
-   RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.8261163931950865`*^9, 3.8261164018581343`*^9}, {
-  3.8261164403512106`*^9, 3.826116467258873*^9}},
- CellLabel->
-  "In[125]:=",ExpressionUUID->"1b0b8adf-dd61-4ede-9107-42a1a03c053f"],
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{"zapornikiSlovenijaTS0318ABS", ",", 
+   RowBox[{"PlotLabel", "\[Rule]", 
+    StyleBox[
+     "\"\<\[CapitalSHacek]tevilo zaprtih oseb v Sloveniji med leti 2003 in \
+2018 - Absolutno\>\"",
+     StripOnInput->False,
+     LineColor->RGBColor[0, 0, 
+       Rational[2, 3]],
+     FrontFaceColor->RGBColor[0, 0, 
+       Rational[2, 3]],
+     BackFaceColor->RGBColor[0, 0, 
+       Rational[2, 3]],
+     GraphicsColor->RGBColor[0, 0, 
+       Rational[2, 3]],
+     FontSize->16,
+     FontColor->RGBColor[0, 0, 
+       Rational[2, 3]],
+     Background->RGBColor[1, 1, 
+       Rational[1, 3]]]}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", 
+   RowBox[{"PlotTheme", "\[Rule]", "\"\<Detailed\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.8273934157962914`*^9, {3.827393527030833*^9, 3.827393531537319*^9}, 
+   3.827395866922471*^9},
+ CellLabel->"In[48]:=",ExpressionUUID->"738a0ea3-24d6-45a5-8303-f7f7654ff16d"],
 
 Cell[BoxData[
- GraphicsBox[{{}, {
-    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 10126.}, {3., 10526.}, {4., 11040.}, {5., 11183.}, {6., 
-      11818.}, {8., 10994.}}]}, 
-    {RGBColor[0.880722, 0.611041, 0.142051], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 9006.}, {3., 9379.}, {4., 9885.}, {5., 9493.}, {6., 
-      8834.}, {7., 7870.}, {8., 7408.}, {9., 7345.}, {10., 6988.}, {11., 
-      6651.}}]}, 
-    {RGBColor[0.560181, 0.691569, 0.194885], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 3721.}, {3., 3944.}, {4., 3947.}, {5., 3829.}, {6., 
-      4091.}, {7., 3583.}, {8., 3203.}, {9., 3408.}, {10., 3418.}, {11., 
-      3635.}}]}, 
-    {RGBColor[0.922526, 0.385626, 0.209179], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 3555.}, {3., 3393.}, {4., 3400.}, {5., 3286.}, {6., 
-      3023.}, {7., 3034.}, {8., 2823.}, {9., 2864.}, {10., 2723.}, {11., 
-      2584.}}]}, 
-    {RGBColor[0.528488, 0.470624, 0.701351], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 3868.}, {3., 4318.}, {4., 4216.}, {5., 4287.}, {6., 
-      4088.}, {7., 3777.}, {8., 3755.}, {9., 3718.}, {10., 3680.}, {11., 
-      3962.}}]}, 
-    {RGBColor[0.772079, 0.431554, 0.102387], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 11364.}, {3., 12349.}, {4., 12479.}, {5., 12475.}, {6., 
-      12693.}, {7., 11798.}, {8., 9611.}, {9., 9560.}, {10., 10011.}, {11., 
-      10654.}}]}, 
-    {RGBColor[0.363898, 0.618501, 0.782349], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 76079.}, {3., 73929.}, {4., 70472.}, {5., 68597.}, {6., 
-      66765.}, {7., 65017.}, {8., 61614.}, {9., 59589.}, {10., 58814.}, {11., 
-      58883.}}]}, 
-    {RGBColor[1, 0.75, 0], PointSize[0.009166666666666668], AbsoluteThickness[
-     1.6], PointBox[{{2., 60978.}, {3., 60544.}, {4., 64787.}, {5., 66572.}, {
-      6., 67075.}, {7., 66270.}, {8., 66678.}, {9., 68432.}, {10., 68974.}, {
-      11., 70059.}}]}, 
-    {RGBColor[0.647624, 0.37816, 0.614037], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 4891.}, {3., 5165.}, {4., 5084.}, {5., 4741.}, {6., 
-      4352.}, {7., 3763.}, {8., 3341.}, {9., 3108.}, {10., 3190.}, {11., 
-      3217.}}]}, 
-    {RGBColor[0.571589, 0.586483, 0.], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 65598.}, {3., 69263.}, {4., 68325.}, {5., 67102.}, {6., 
-      63848.}, {7., 54745.}, {8., 53410.}, {9., 55978.}, {10., 59038.}, {11., 
-      61131.}}]}, 
-    {RGBColor[0.915, 0.3325, 0.2125], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 578.}, {3., 636.}, {4., 622.}, {5., 678.}, {6., 553.}, {
-      7., 532.}, {8., 547.}, {9., 586.}, {10., 592.}, {11., 619.}}]}, 
-    {RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], PointSize[
-     0.009166666666666668], AbsoluteThickness[1.6], 
-     PointBox[{{2., 7055.}, {3., 6780.}, {4., 6561.}, {5., 6117.}, {6., 
-      5136.}, {7., 4745.}, {8., 4409.}, {9., 4243.}, {10., 3765.}, {11., 
-      3522.}}]}, 
-    {RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
-     PointSize[0.009166666666666668], AbsoluteThickness[1.6], 
-     PointBox[{{2., 8655.}, {3., 9139.}, {4., 9920.}, {5., 9729.}, {6., 
-      9261.}, {7., 8636.}, {8., 7355.}, {9., 6815.}, {10., 6599.}, {11., 
-      6485.}}]}, 
-    {RGBColor[0.736782672705901, 0.358, 0.5030266573755369], PointSize[
-     0.009166666666666668], AbsoluteThickness[1.6], 
-     PointBox[{{2., 702.}, {3., 681.}, {4., 637.}, {5., 666.}, {6., 656.}, {
-      7., 626.}, {8., 691.}, {9., 724.}, {10., 684.}, {11., 656.}}]}, 
-    {RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], PointSize[
-     0.009166666666666668], AbsoluteThickness[1.6], 
-     PointBox[{{2., 15432.}, {3., 16328.}, {4., 17210.}, {5., 17179.}, {6., 
-      17841.}, {7., 17890.}, {8., 17449.}, {9., 17658.}, {10., 17343.}, {11., 
-      16303.}}]}, 
-    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 494.}, {3., 584.}, {4., 584.}, {5., 585.}, {6., 615.}, {
-      7., 581.}, {8., 569.}, {9., 553.}, {10., 591.}}]}, 
-    {RGBColor[0.880722, 0.611041, 0.142051], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 14364.}, {3., 14368.}, {4., 13969.}, {5., 13473.}, {6., 
-      12721.}, {7., 11934.}, {8., 10850.}, {9., 10601.}, {10., 10874.}, {11., 
-      11251.}}]}, 
-    {RGBColor[0.560181, 0.691569, 0.194885], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 8708.}, {3., 8540.}, {4., 8770.}, {5., 8805.}, {6., 
-      8862.}, {7., 8692.}, {8., 8665.}, {9., 8619.}, {10., 8852.}, {11., 
-      9163.}}]}, 
-    {RGBColor[0.922526, 0.385626, 0.209179], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 85749.}, {3., 82372.}, {4., 82832.}, {5., 85459.}, {6., 
-      80165.}, {7., 79345.}, {8., 72695.}, {9., 72209.}, {10., 74480.}, {11., 
-      72818.}}]}, 
-    {RGBColor[0.528488, 0.470624, 0.701351], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 11287.}, {3., 11839.}, {4., 12955.}, {5., 13875.}, {6., 
-      14535.}, {7., 14198.}, {8., 14373.}, {9., 13917.}, {10., 13587.}, {11., 
-      13021.}}]}, 
-    {RGBColor[0.772079, 0.431554, 0.102387], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 26716.}, {3., 28244.}, {4., 30694.}, {5., 31817.}, {6., 
-      33434.}, {7., 30156.}, {8., 28334.}, {9., 27455.}, {10., 23450.}, {11., 
-      20792.}}]}, 
-    {RGBColor[0.363898, 0.618501, 0.782349], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 1365.}, {3., 1351.}, {4., 1273.}, {5., 1377.}, {6., 
-      1360.}, {7., 1522.}, {8., 1399.}, {9., 1308.}, {11., 1396.}}]}, 
-    {RGBColor[1, 0.75, 0], PointSize[0.009166666666666668], AbsoluteThickness[
-     1.6], PointBox[{{2., 9316.}, {3., 10031.}, {4., 10525.}, {5., 10850.}, {
-      6., 9753.}, {7., 10020.}, {8., 9913.}, {9., 9995.}, {10., 10028.}, {11.,
-       10294.}}]}, 
-    {RGBColor[0.647624, 0.37816, 0.614037], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 3589.}, {3., 3364.}, {4., 3268.}, {5., 3306.}, {6., 
-      3295.}, {7., 3148.}, {8., 3135.}, {9., 3156.}, {10., 3082.}, {11., 
-      2956.}}]}, 
-    {RGBColor[0.571589, 0.586483, 0.], PointSize[0.009166666666666668], 
-     AbsoluteThickness[1.6], 
-     PointBox[{{2., 7286.}, {3., 6846.}, {4., 6669.}, {5., 6296.}, {6., 
-      5723.}, {7., 5807.}, {8., 5691.}, {9., 5658.}, {10., 5713.}, {11., 
-      6114.}}]}}, {{}, {}}},
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      NCache[
+       Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+     LineBox[{{2003., 1070.}, {2004., 1085.}, {2005., 1132.}, {2006., 
+      1301.}, {2007., 1336.}, {2008., 1318.}, {2009., 1365.}, {2010., 
+      1351.}, {2011., 1273.}, {2012., 1377.}, {2013., 1360.}, {2014., 
+      1522.}, {2015., 1399.}, {2016., 1308.}, {2017., 1316.}, {2018., 
+      1396.}}]}}, {{}, {}}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
-  Axes->{True, True},
+  Axes->{False, False},
   AxesLabel->{None, None},
-  AxesOrigin->{0., 0},
+  AxesOrigin->{2002.6875000000002`, 1044.888888888889},
   DisplayFunction->Identity,
-  Frame->{{False, False}, {False, False}},
+  Frame->{{True, True}, {True, True}},
   FrameLabel->{{None, None}, {None, None}},
+  FrameStyle->Automatic,
   FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
-  GridLines->{None, None},
+  GridLines->{Automatic, Automatic},
   GridLinesStyle->Directive[
-    GrayLevel[0.5, 0.4]],
+    GrayLevel[0.4, 0.5], 
+    AbsoluteThickness[1], 
+    AbsoluteDashing[{1, 2}]],
   ImageSize->Large,
   Method->{
    "OptimizePlotMarkers" -> True, "OptimizePlotMarkers" -> True, 
@@ -690,18 +1151,27 @@ Cell[BoxData[
          Part[#, 1]], 
         Identity[
          Part[#, 2]]}& )}},
-  PlotRange->{{0., 11.}, {0, 85749.}},
+  PlotLabel->FormBox[
+    StyleBox[
+    "\"\[CapitalSHacek]tevilo zaprtih oseb v Sloveniji med leti 2003 in 2018 \
+- Absolutno\"", LineColor -> RGBColor[0, 0, 
+       Rational[2, 3]], FrontFaceColor -> RGBColor[0, 0, 
+       Rational[2, 3]], $CellContext`BackFaceColor -> RGBColor[0, 0, 
+       Rational[2, 3]], GraphicsColor -> RGBColor[0, 0, 
+       Rational[2, 3]], FontSize -> 16, FontColor -> RGBColor[0, 0, 
+       Rational[2, 3]], Background -> RGBColor[1, 1, 
+       Rational[1, 3]], StripOnInput -> False], TraditionalForm],
+  PlotRange->{{2002.6875000000002`, 2018.}, {1044.888888888889, 1522.}},
   PlotRangeClipping->True,
   PlotRangePadding->{{
      Scaled[0.02], 
      Scaled[0.02]}, {
-     Scaled[0.02], 
+     Scaled[0.05], 
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{
-  3.8261164030090294`*^9, {3.826116447769484*^9, 3.8261164678951044`*^9}},
- CellLabel->
-  "Out[125]=",ExpressionUUID->"376bc3a0-5aff-40a6-982b-733f31fbaf69"]
+ CellChangeTimes->{3.8273934159246597`*^9, 3.827393533506752*^9, 
+  3.8273959130497417`*^9},
+ CellLabel->"Out[48]=",ExpressionUUID->"e39e9f6d-80c8-44fe-a50b-774acc2f8754"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -777,8 +1247,8 @@ Cell[BoxData[
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{960, 538},
-WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
+WindowSize->{949., 532.5},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"7a3148b5-3493-49f2-b248-26c3c48e4068"
@@ -799,32 +1269,52 @@ Cell[580, 22, 218, 4, 98, "Title",ExpressionUUID->"0509346a-e9de-4ea4-a382-c70a7
 Cell[801, 28, 163, 3, 34, "Text",ExpressionUUID->"fe4c2f9e-1c26-42bb-9650-d4b234794522"],
 Cell[CellGroupData[{
 Cell[989, 35, 176, 3, 67, "Section",ExpressionUUID->"43b3cae5-cc0b-45ae-89ba-8f0e0a382fa4"],
-Cell[1168, 40, 352, 8, 28, "Input",ExpressionUUID->"1fb9c9e5-9a64-47e6-a4e5-b0a253b9f134"],
-Cell[1523, 50, 709, 15, 48, "Input",ExpressionUUID->"01b131bc-be51-4252-bc3a-198a828d51b6"],
-Cell[2235, 67, 863, 19, 28, "Input",ExpressionUUID->"422378c5-561d-4f53-9736-848d55225cd7"],
-Cell[3101, 88, 897, 19, 28, "Input",ExpressionUUID->"e51b2177-8377-431a-a208-b3975f12cc0f"],
-Cell[4001, 109, 551, 13, 28, "Input",ExpressionUUID->"beebc0a9-7395-4939-90a9-8c6a89d9da83"],
-Cell[4555, 124, 727, 18, 48, "Input",ExpressionUUID->"67d26b8c-b5f8-4f5e-b6d9-725df0694c02"],
 Cell[CellGroupData[{
-Cell[5307, 146, 1004, 23, 48, "Input",ExpressionUUID->"dd370f9c-dfd3-4a67-8414-b0fa5210043c"],
-Cell[6314, 171, 14348, 285, 65, "Output",ExpressionUUID->"e1e18f65-bd36-4e0a-b638-31f212ecfa4b"]
+Cell[1190, 42, 565, 10, 28, "Input",ExpressionUUID->"25bdc257-09fe-46eb-99ac-fb11d359155b"],
+Cell[1758, 54, 1545, 24, 111, "Output",ExpressionUUID->"61be2520-4b51-4647-91fa-f47f440f18bd"]
+}, Open  ]],
+Cell[3318, 81, 447, 9, 28, "Input",ExpressionUUID->"42f0f9b6-5860-4466-b607-edee7442e0e2"],
+Cell[3768, 92, 590, 12, 28, "Input",ExpressionUUID->"af38dcff-b26a-4dfd-91db-ac8b87711f70"],
+Cell[CellGroupData[{
+Cell[4383, 108, 1310, 28, 48, "Input",ExpressionUUID->"8d86efed-3bae-47ce-86a7-0996809b036f"],
+Cell[5696, 138, 19632, 295, 1602, "Output",ExpressionUUID->"656b68f1-55d5-4ec3-829e-1f7b28222762"]
+}, Open  ]],
+Cell[25343, 436, 704, 14, 48, "Input",ExpressionUUID->"01b131bc-be51-4252-bc3a-198a828d51b6"],
+Cell[26050, 452, 863, 19, 28, "Input",ExpressionUUID->"422378c5-561d-4f53-9736-848d55225cd7"],
+Cell[26916, 473, 897, 19, 28, "Input",ExpressionUUID->"e51b2177-8377-431a-a208-b3975f12cc0f"],
+Cell[27816, 494, 1148, 27, 48, "Input",ExpressionUUID->"71984ddf-3201-4550-8cc3-12c6d5b0876c"],
+Cell[CellGroupData[{
+Cell[28989, 525, 1045, 27, 48, "Input",ExpressionUUID->"2fd7342d-cd5a-4afd-933a-df6f44276584"],
+Cell[30037, 554, 463, 9, 32, "Output",ExpressionUUID->"7141a7be-1378-49ee-b291-9fb1254f5865"]
+}, Open  ]],
+Cell[30515, 566, 547, 12, 28, "Input",ExpressionUUID->"beebc0a9-7395-4939-90a9-8c6a89d9da83"],
+Cell[31065, 580, 748, 19, 48, "Input",ExpressionUUID->"67d26b8c-b5f8-4f5e-b6d9-725df0694c02"],
+Cell[CellGroupData[{
+Cell[31838, 603, 424, 11, 28, "Input",ExpressionUUID->"a12f4ec5-cc54-492c-b949-1e419aa46660"],
+Cell[32265, 616, 14420, 287, 65, "Output",ExpressionUUID->"ea760cc0-45c8-4457-a44d-d362c52d3f65"]
+}, Open  ]],
+Cell[46700, 906, 852, 19, 48, "Input",ExpressionUUID->"235f95da-1272-4e5f-959f-fc6bfe7f2075"],
+Cell[47555, 927, 1091, 24, 48, "Input",ExpressionUUID->"dd370f9c-dfd3-4a67-8414-b0fa5210043c"],
+Cell[CellGroupData[{
+Cell[48671, 955, 1041, 21, 75, "Input",ExpressionUUID->"45edaab7-ee25-427b-9694-90fbf02b4cc8"],
+Cell[49715, 978, 396, 9, 23, "Message",ExpressionUUID->"85ec0552-cfd7-4cd3-85e7-912876c5504c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20699, 461, 931, 18, 75, "Input",ExpressionUUID->"45edaab7-ee25-427b-9694-90fbf02b4cc8"],
-Cell[21633, 481, 2082, 54, 391, "Output",ExpressionUUID->"26170bfc-a0db-4322-a698-c0eb49d715d5"]
+Cell[50148, 992, 1251, 31, 74, "Input",ExpressionUUID->"aeb905fc-7b82-4d32-bfd9-bc69e25046c0"],
+Cell[51402, 1025, 2596, 59, 398, "Output",ExpressionUUID->"f1013268-3bdb-4916-88fc-3b9ec7dd53da"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23752, 540, 351, 7, 28, "Input",ExpressionUUID->"1b0b8adf-dd61-4ede-9107-42a1a03c053f"],
-Cell[24106, 549, 8007, 154, 367, "Output",ExpressionUUID->"376bc3a0-5aff-40a6-982b-733f31fbaf69"]
+Cell[54035, 1089, 971, 26, 74, InheritFromParent,ExpressionUUID->"738a0ea3-24d6-45a5-8303-f7f7654ff16d"],
+Cell[55009, 1117, 2329, 56, 391, "Output",ExpressionUUID->"e39e9f6d-80c8-44fe-a50b-774acc2f8754"]
 }, Open  ]],
-Cell[32128, 706, 327, 8, 28, "Input",ExpressionUUID->"1fe73069-1c3e-477a-9a55-0f0e850ff49c"],
-Cell[32458, 716, 799, 16, 48, "Input",ExpressionUUID->"81470cd6-4c76-4730-85fa-d77c80c23773"],
+Cell[57353, 1176, 327, 8, 28, "Input",ExpressionUUID->"1fe73069-1c3e-477a-9a55-0f0e850ff49c"],
+Cell[57683, 1186, 799, 16, 48, "Input",ExpressionUUID->"81470cd6-4c76-4730-85fa-d77c80c23773"],
 Cell[CellGroupData[{
-Cell[33282, 736, 503, 11, 28, "Input",ExpressionUUID->"9407ec87-f48f-49c8-85e9-40597397d852"],
-Cell[33788, 749, 166, 3, 32, "Output",ExpressionUUID->"fbe4b524-704d-4e43-8633-0394cabca228"]
+Cell[58507, 1206, 503, 11, 28, "Input",ExpressionUUID->"9407ec87-f48f-49c8-85e9-40597397d852"],
+Cell[59013, 1219, 166, 3, 32, "Output",ExpressionUUID->"fbe4b524-704d-4e43-8633-0394cabca228"]
 }, Open  ]],
-Cell[33969, 755, 614, 11, 28, "Input",ExpressionUUID->"1267c650-5b88-4e8e-bb0c-89ee2afe85f9"],
-Cell[34586, 768, 314, 7, 28, "Input",ExpressionUUID->"b2055315-ee03-4aca-8cb7-41da3c671280"]
+Cell[59194, 1225, 614, 11, 28, "Input",ExpressionUUID->"1267c650-5b88-4e8e-bb0c-89ee2afe85f9"],
+Cell[59811, 1238, 314, 7, 28, "Input",ExpressionUUID->"b2055315-ee03-4aca-8cb7-41da3c671280"]
 }, Open  ]]
 }, Open  ]]
 }
