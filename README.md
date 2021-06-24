@@ -10,7 +10,11 @@ Pri projektu uporabljamo računalniški program _Mathematica_.
 3. S pomočjo grafov bom pokazal spreminjanje števila zapornikov. Preveril bom zasedenost zaporov v Evropskih državah.
 4. Poskušal bom pokazati korelacijo med revščino in število zaprtih oseb.
 5. Analiziral bom razmere v zaporih (prezasedenost) ter primerjal med posameznimi državami.
-6. S pomočjo programa bom pripravil tudi aplikacijo, ki je dostopna na spodji povezavi.
+6. S pomočjo programa bom pripravil tudi aplikacijo, ki je dostopna na spodnji povezavi.
+7. Na voljo je tudi video (povezava je objavljena spodaj).
 ### Aplikacija
-https://www.wolframcloud.com/obj/404719e1-d24f-4530-95e1-bb68325fdeb6
+Povezava:https://www.wolframcloud.com/obj/404719e1-d24f-4530-95e1-bb68325fdeb6
+### Videoposnetek
+Povezav:https://www.youtube.com/watch?v=ultbHfUyjOo
+
 Pripravil: *Jernej Renčelj*
